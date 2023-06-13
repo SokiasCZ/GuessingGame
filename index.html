@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGBle</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="Logo">
+        <img src="./sources/RGBleLogo.png">
+    </div>
+
+    <div class="Middle">
+        <div class="Square">
+            <div class="SquareColor" style="background: rgb(17, 17, 17)" id="mainSquare"></div>
+        </div>
+    </div>
+
+    <div class="Middle">
+        <input class="Input" type="number" value="0" min="0" max="255" id="red">
+        <input class="Input" type="number" value="0"  min="0" max="255" id="green">
+        <input class="Input" type="number" value="0"  min="0" max="255" id="blue">
+        <button class="Button" id="guessButton">Guess</button>
+    </div>
+    <div class="Attempts">
+        <p>Attempt <span id="currAttempt">0</span>/8</p>
+    </div>
+   
+    <div class="Middle">
+        <table class="Table">
+
+            <!--Tables-->
+            <tr id="row1" hidden>
+                <td class="Row" id="Red1">Red: 0</td>
+                <td class="Row" id="Green1">Green: 0</td>
+                <td class="Row" id="Blue1">Blue: 0</td>
+                
+                <td>
+                    <div class="Square">
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare1"></div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr id="row2" hidden>
+                <td class="Row" id="Red2">Red: 0</td>
+                <td class="Row" id="Green2">Green: 0</td>
+                <td class="Row" id="Blue2">Blue: 0</td>
+
+                <td>
+                    <div class="Square">
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare2"></div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr id="row3" hidden>
+                <td class="Row" id="Red3">Red: 0</td>
+                <td class="Row" id="Green3">Green: 0</td>
+                <td class="Row" id="Blue3">Blue: 0</td>
+
+                <td>
+                    <div class="Square">
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare3"></div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr id="row4" hidden>
+                <td class="Row" id="Red4">Red: 0</td>
+                <td class="Row" id="Green4">Green: 0</td>
+                <td class="Row" id="Blue4">Blue: 0</td>
+
+                <td>
+                    <div class="Square">
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare4"></div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr id="row5" hidden>
+                <td class="Row" id="Red5">Red: 0</td>
+                <td class="Row" id="Green5">Green: 0</td>
+                <td class="Row" id="Blue5">Blue: 0</td>
+
+                <td>
+                    <div class="Square">
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare5"></div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr id="row6" hidden>
+                <td class="Row" id="Red6">Red: 0</td>
+                <td class="Row" id="Green6">Green: 0</td>
+                <td class="Row" id="Blue6">Blue: 0</td>
+
+                <td>
+                    <div class="Square">
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare6"></div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr id="row7" hidden>
+                <td class="Row" id="Red7">Red: 0</td>
+                <td class="Row" id="Green7">Green: 0</td>
+                <td class="Row" id="Blue7">Blue: 0</td>
+
+                <td>
+                    <div class="Square">
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare7"></div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr id="row8" hidden>
+                <td class="Row" id="Red8">Red: 0</td>
+                <td class="Row" id="Green8">Green: 0</td>
+                <td class="Row" id="Blue8">Blue: 0</td>
+
+                <td>
+                    <div class="Square">
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare8"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Win table-->
+    <div class="Middle">
+        <table class="Table">
+            <tr id="wintable" hidden>
+                <td class="Row" style="width:100%" id="winrow">🎉You won!🎉</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src='index.js'></script>
+    
+</body>
+</html>
