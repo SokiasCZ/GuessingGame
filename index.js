@@ -32,6 +32,10 @@ function clickFunction() {
     const blueByUser = document.getElementById('Blue'+attemptNum);
     const rowSquare = document.getElementById('rowSquare'+attemptNum);
 
+    const redClose = Math.abs(red - redAns);
+    const greenClose = Math.abs(green - greenAns);
+    const blueClose = Math.abs(blue - blueAns);
+
     let redSign = '⬇️';
     if (red < redAns) { redSign = '⬆️'; } else if (red == redAns) { redSign = '✅'; }
     let greenSign = '⬇️';
@@ -39,9 +43,9 @@ function clickFunction() {
     let blueSign = '⬇️';
     if (blue < blueAns) { blueSign = '⬆️'; } else if (blue == blueAns) { blueSign = '✅'; }
 
-    redByUser.innerHTML = 'R: '+red+' '+redSign;
-    greenByUser.innerHTML = 'G: '+green+' '+greenSign;
-    blueByUser.innerHTML = 'B: '+blue+' '+blueSign;
+    redByUser.innerHTML = 'R: '+red+' '+redSign+' '+howClose(redClose);
+    greenByUser.innerHTML = 'G: '+green+' '+greenSign+' '+howClose(greenClose);
+    blueByUser.innerHTML = 'B: '+blue+' '+blueSign+' '+howClose(blueClose);
     rowSquare.style.background = 'rgb('+red+', '+green+', '+blue+')';
 
 
@@ -63,8 +67,23 @@ function clickFunction() {
     }
     
 
-    redInp.value = 0;
-    greenInp.value = 0;
-    blueInp.value = 0;
+    redInp.value = red;
+    greenInp.value = green;
+    blueInp.value = blue;
     
+}
+
+function howClose(distance) {
+    if (distance < 5)
+    { return '🔥🔥🔥'; }
+    else if (distance < 15) 
+    { return '🔥🔥'; }
+    else if (distance < 45) 
+    { return '🔥'; }
+    else if (distance < 80) 
+    { return '❄️'; }
+    else if (distance < 150) 
+    { return '❄️❄️'; }
+    else 
+    { return '❄️❄️❄️'; }
 }

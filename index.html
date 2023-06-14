@@ -10,26 +10,38 @@
 </head>
 <body>
 
+    <!--Logo-->
     <div class="Logo">
-        <img src="./sources/RGBleLogo.png">
+        <img src="./sources/RGBleLogo.png" style="height: 15%; width: 15%;">
     </div>
 
-    <div class="Middle">
+    <div class="Middle" style="justify-content: center; align-items: center; margin: 2px;">
+        <button style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0,0,0,0); width: 50px; height: 50px; align-items: center; justify-content: center;">
+            <img style="width: 30px; height: 30px;" src="./sources/QuestionMark.png">
+        </button>    
+    </div>
+
+    <!--Guess Square-->
+    <div class="Middle" style="margin: 0px; padding: 0px;">
         <div class="Square">
-            <div class="SquareColor" style="background: rgb(17, 17, 17)" id="mainSquare"></div>
+            <div class="SquareColor" style="background: rgb(17, 17, 17); width:70px; height: 70px; border-width: 5px;" id="mainSquare"></div>
         </div>
     </div>
 
+    <!--Input fields-->
     <div class="Middle">
         <input class="Input" type="number" value="0" min="0" max="255" id="red">
         <input class="Input" type="number" value="0"  min="0" max="255" id="green">
         <input class="Input" type="number" value="0"  min="0" max="255" id="blue">
-        <button class="Button" id="guessButton">Guess</button>
+        <button class="Button" id="guessButton" style="width: 50px; height: 30px; font-size: 10px; margin: 2px;">Guess</button>
     </div>
+
+    <!--Attempts-->
     <div class="Attempts">
-        <p>Attempt <span id="currAttempt">0</span>/8</p>
+        <p style="font-size: 12px">Attempt <span id="currAttempt">0</span>/8</p>
     </div>
    
+    <!--Attempts Table-->
     <div class="Middle">
         <table class="Table">
 
@@ -41,7 +53,7 @@
                 
                 <td>
                     <div class="Square">
-                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare1"></div>
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 20px; height: 20px; border-width: 2px;" id="rowSquare1"></div>
                     </div>
                 </td>
             </tr>
@@ -53,7 +65,7 @@
 
                 <td>
                     <div class="Square">
-                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare2"></div>
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 20px; height: 20px; border-width: 2px;" id="rowSquare2"></div>
                     </div>
                 </td>
             </tr>
@@ -65,7 +77,7 @@
 
                 <td>
                     <div class="Square">
-                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare3"></div>
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 20px; height: 20px; border-width: 2px;" id="rowSquare3"></div>
                     </div>
                 </td>
             </tr>
@@ -77,7 +89,7 @@
 
                 <td>
                     <div class="Square">
-                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare4"></div>
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 20px; height: 20px; border-width: 2px;" id="rowSquare4"></div>
                     </div>
                 </td>
             </tr>
@@ -89,7 +101,7 @@
 
                 <td>
                     <div class="Square">
-                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare5"></div>
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 20px; height: 20px; border-width: 2px;" id="rowSquare5"></div>
                     </div>
                 </td>
             </tr>
@@ -101,7 +113,7 @@
 
                 <td>
                     <div class="Square">
-                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare6"></div>
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 20px; height: 20px; border-width: 2px;" id="rowSquare6"></div>
                     </div>
                 </td>
             </tr>
@@ -113,7 +125,7 @@
 
                 <td>
                     <div class="Square">
-                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare7"></div>
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 20px; height: 20px; border-width: 2px;" id="rowSquare7"></div>
                     </div>
                 </td>
             </tr>
@@ -125,7 +137,7 @@
 
                 <td>
                     <div class="Square">
-                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 50px; height: 50px; border-width: 5px;" id="rowSquare8"></div>
+                        <div class="SquareColor" style="background: rgb(17, 17, 17); width: 20px; height: 20px; border-width: 2px;" id="rowSquare8"></div>
                     </div>
                 </td>
             </tr>
@@ -136,10 +148,14 @@
     <div class="Middle">
         <table class="Table">
             <tr id="wintable" hidden>
-                <td class="Row" style="width:100%" id="winrow">🎉You won!🎉</td>
+                <td class="Row" style="width:300px; height:30px" id="winrow">🎉You won!🎉</td>
             </tr>
         </table>
     </div>
+
+    <!--Popup-->
+    
+
 
     <script src='index.js'></script>
     
