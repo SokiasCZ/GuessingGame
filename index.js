@@ -1,4 +1,6 @@
 document.getElementById('guessButton').addEventListener('click', clickFunction);
+document.getElementById('tutorial').addEventListener('click', openPopup);
+document.getElementById('popupButton').addEventListener('click', closePopup);
 const redAns = Math.floor(Math.random() * 256);
 const greenAns = Math.floor(Math.random() * 256);
 const blueAns = Math.floor(Math.random() * 256);
@@ -8,6 +10,14 @@ console.log(redAns, greenAns, blueAns);
 
 const backgroundColor = 'rgb('+redAns+', '+greenAns+', '+blueAns+')';
 document.getElementById('mainSquare').style.background = backgroundColor;
+
+function openPopup() {
+    document.getElementById('PopupBackground').hidden = false;
+}
+
+function closePopup() {
+    document.getElementById('PopupBackground').hidden = true;
+}
 
 function clickFunction() {
     const redInp = document.getElementById('red');
